@@ -188,10 +188,10 @@ rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 rm -rf luci-app-noddos
 #移动luci-base、luci-mod-status、luci-mod-system到A-model文件夹
 mkdir A-model
-mv luci-base A-model/luci-base
-mv luci-mod-status A-model/luci-mod-status
-mv luci-mod-system A-model/luci-mod-system
-mv noodles-default-settings A-model/noodles-default-settings
+mv -f luci-base A-model/luci-base
+mv -f luci-mod-status A-model/luci-mod-status
+mv -f luci-mod-system A-model/luci-mod-system
+#mv noodles-default-settings A-model/noodles-default-settings
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
