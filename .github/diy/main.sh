@@ -191,6 +191,7 @@ mkdir A-model
 mv luci-base A-model/luci-base
 mv luci-mod-status A-model/luci-mod-status
 mv luci-mod-system A-model/luci-mod-system
+mv noodles-default-settings A-model/noodles-default-settings
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
