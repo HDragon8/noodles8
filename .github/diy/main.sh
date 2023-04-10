@@ -186,6 +186,11 @@ rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 #删除没有依赖的包
 rm -rf luci-app-noddos
+#移动luci-base、luci-mod-status、luci-mod-system到A-model文件夹
+mkdir A-model
+mv luci-base A-model/luci-base
+mv luci-mod-status A-model/luci-mod-status
+mv luci-mod-system A-model/luci-mod-system
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
