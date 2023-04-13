@@ -139,18 +139,8 @@ svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-goweb
 svn export https://github.com/immortalwrt/packages/trunk/net/gowebdav
 #svn export https://github.com/istoreos/istoreos/trunk/package/istoreos-files
 #kiddin9's packages
-#svn export https://github.com/kiddin9/openwrt-packages/trunk/autocore
-#svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-base
-#svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-mod-status
-#svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-mod-system
-#svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-samba4
-#svn export https://github.com/kiddin9/openwrt-packages/trunk/firewall
-#svn export https://github.com/kiddin9/openwrt-packages/trunk/firewall4
 
 git_sparse_clone master "https://github.com/kiddin9/openwrt-packages" "kinddin9" autocore luci-base luci-mod-status luci-mod-system
-
-#git_sparse_clone master "https://github.com/kiddin9/openwrt-packages" "kinddin9" autocore luci-base luci-mod-status luci-mod-system luci-app-firewall \
-#firewall firewall4 dnsmasq openssl ppp opkg luci-app-opkg luci-app-samba4 luci-app-upnp luci-mod-network luci-app-watchcat
 
 rm -rf luci-app-netdata
 
@@ -200,19 +190,6 @@ mkdir A-model
 mv -f luci-base A-model/luci-base
 mv -f luci-mod-status A-model/luci-mod-status
 mv -f luci-mod-system A-model/luci-mod-system
-#mv -f luci-app-samba4 A-model/luci-app-samba4
-#mv -f luci-mod-network A-model/luci-mod-network
-#mv -f luci-app-firewall A-model/luci-app-firewall
-#mv -f firewall A-model/firewall
-#mv -f firewall4 A-model/firewall4
-#mv -f dnsmasq A-model/dnsmasq
-#mv -f openssl A-model/openssl
-#mv -f ppp A-model/ppp
-#mv -f opkg A-model/opkg
-#mv -f luci-app-opkg A-model/luci-app-opkg
-#mv -f luci-app-upnp A-model/luci-app-upnp
-#mv -f luci-app-watchcat A-model/luci-app-watchcat
-#mv noodles-default-settings A-model/noodles-default-settings
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
