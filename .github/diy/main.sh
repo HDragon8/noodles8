@@ -140,7 +140,7 @@ svn export https://github.com/immortalwrt/packages/trunk/net/gowebdav
 #svn export https://github.com/istoreos/istoreos/trunk/package/istoreos-files
 #kiddin9's packages
 
-git_sparse_clone master "https://github.com/kiddin9/openwrt-packages" "kinddin9" autocore luci-base luci-mod-status luci-mod-system
+git_sparse_clone master "https://github.com/kiddin9/openwrt-packages" "kinddin9" autocore luci-base luci-mod-status luci-mod-system luci-app-samba4
 
 rm -rf luci-app-netdata
 
@@ -190,6 +190,7 @@ mkdir A-model
 mv -f luci-base A-model/luci-base
 mv -f luci-mod-status A-model/luci-mod-status
 mv -f luci-mod-system A-model/luci-mod-system
+mv -f luci-app-samba4 A-model/luci-app-samba4
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
