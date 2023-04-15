@@ -6967,6 +6967,7 @@ cato.org
 catsoncrack.com
 catswall.net
 cattt.com
+cavporn.com
 caxata.com
 cba
 cbart.net
@@ -13087,6 +13088,7 @@ h090909.com
 h0930.com
 h1388.com
 h1665.com
+h18ani1.vip
 h1n1china.org
 h2.elf168.net
 h22.elf168.net
@@ -33749,6 +33751,8 @@ full:officecdn-microsoft-com.akamaized.net
 full:oneocsp.microsoft.com
 full:ood.opsource.net
 full:openaiapi-site.azureedge.net
+full:openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+full:openaicomproductionae4b.blob.core.windows.net
 full:opgg-static.akamaized.net
 full:origin-a.akamaihd.net
 full:p-events-delivery.akamaized.net
@@ -33763,6 +33767,7 @@ full:practivate.adobe.ipp
 full:practivate.adobe.newoa
 full:practivate.adobe.ntp
 full:prd-priconne-redive.akamaized.net
+full:production-openaicom-storage.azureedge.net
 full:psg-int-centralus.cloudapp.net
 full:psg-int-eastus.cloudapp.net
 full:push-apple.com.akadns.net
@@ -34012,6 +34017,7 @@ regexp:(^|\.)avstar0[1-9]\.(com|me)$
 regexp:(^|\.)banyinjia[0-9]?\.com$
 regexp:(^|\.)bilibili3(0[1-9]|1[0-2])\.xyz$
 regexp:(^|\.)byyum([3589]|2[235689]|3[34]|4[1-9]|5[1-79]|6[0134679])?\.com$
+regexp:(^|\.)cav1(0[2-9]|1[0-9])\.com$
 regexp:(^|\.)cgbb([1-9]|1[0-9]|20)\.com$
 regexp:(^|\.)cosaa[a-z]\.cyou$
 regexp:(^|\.)douyintt[0-9]\.me$
