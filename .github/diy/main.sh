@@ -140,7 +140,8 @@ svn export https://github.com/immortalwrt/packages/trunk/net/gowebdav
 #svn export https://github.com/istoreos/istoreos/trunk/package/istoreos-files
 #kiddin9's packages
 
-git_sparse_clone master "https://github.com/kiddin9/openwrt-packages" "kinddin9" autocore luci-base luci-mod-status luci-mod-system luci-app-samba4
+git_sparse_clone master "https://github.com/kiddin9/openwrt-packages" "kinddin9" autocore luci-base luci-mod-status luci-mod-system luci-app-samba4 \
+firewall firewall4 luci-app-firewall
 
 rm -rf luci-app-netdata
 
@@ -163,8 +164,9 @@ utils/cpulimit utils/filebrowser utils/cups net/udp2raw net/msd_lite net/xfrpc n
 utils/phicomm-k3screenctrl net/apinger net/keepalived net/basicstation libs/sx1302_hal
 
 git_sparse_clone master "https://github.com/immortalwrt/immortalwrt" "immortal" package/kernel/rtl88x2bu \
-package/kernel/r8168 package/kernel/rtl8821cu package/kernel/rtl8189es package/emortal/autocore package/emortal/automount package/network/utils/fullconenat \
-package/utils/mhz
+package/kernel/r8168 package/kernel/rtl8821cu package/kernel/rtl8189es package/emortal/autocore package/emortal/automount \
+package/network/utils/fullconenat package/network/utils/fullconenat-nft \
+package/network/utils/nftables package/utils/mhz package/libs/libnftnl
 
 git_sparse_clone master "https://github.com/coolsnowwolf/luci" "leluci" applications libs/luci-lib-fs
 mv -f applications luciapp
@@ -191,6 +193,11 @@ mv -f luci-base A-model/luci-base
 mv -f luci-mod-status A-model/luci-mod-status
 mv -f luci-mod-system A-model/luci-mod-system
 mv -f luci-app-samba4 A-model/luci-app-samba4
+mv -f nftables A-model/nftables
+mv -f libnftnl A-model/libnftnl
+mv -f firewall A-model/firewall
+mv -f firewall4 A-model/firewall4
+mv -f luci-app-firewall A-model/luci-app-firewall
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
