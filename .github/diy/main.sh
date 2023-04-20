@@ -204,7 +204,7 @@ mv -f libnftnl A-model/libnftnl
 mv -f firewall A-model/firewall
 mv -f firewall4 A-model/firewall4
 mv -f luci-app-firewall A-model/luci-app-firewall
-mv -f 952-net-conntrack-events-support-multiple-registrant.patch /.github/diy/target/linux/generic/hack-5.10/952-net-conntrack-events-support-multiple-registrant.patch
+#mv -f 952-net-conntrack-events-support-multiple-registrant.patch .github/diy/target/linux/generic/hack-5.10/952-net-conntrack-events-support-multiple-registrant.patch
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
