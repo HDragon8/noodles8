@@ -141,6 +141,7 @@ svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-xunle
 svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-gowebdav
 svn export https://github.com/immortalwrt/packages/trunk/net/gowebdav
 svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-firewall
+svn export https://github.com/immortalwrt/immortalwrt/trunk/target/linux/generic/hack-5.10/952-net-conntrack-events-support-multiple-registrant.patch
 #svn export https://github.com/istoreos/istoreos/trunk/package/istoreos-files
 #kiddin9's packages
 
@@ -170,8 +171,8 @@ utils/phicomm-k3screenctrl net/apinger net/keepalived net/basicstation libs/sx13
 git_sparse_clone master "https://github.com/immortalwrt/immortalwrt" "immortal" package/kernel/rtl88x2bu \
 package/kernel/r8168 package/kernel/rtl8821cu package/kernel/rtl8189es package/emortal/autocore package/emortal/automount \
 package/network/utils/fullconenat package/network/utils/fullconenat-nft \
-package/network/utils/nftables package/utils/mhz package/libs/libnftnl package/network/config/firewall package/network/config/firewall4 \
-target/linux/generic/hack-5.10/952-net-conntrack-events-support-multiple-registrant.patch
+package/network/utils/nftables package/utils/mhz package/libs/libnftnl \
+package/network/config/firewall package/network/config/firewall4
 
 git_sparse_clone master "https://github.com/coolsnowwolf/luci" "leluci" applications libs/luci-lib-fs
 mv -f applications luciapp
