@@ -140,12 +140,12 @@ svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-timew
 svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-xunlei
 svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-gowebdav
 svn export https://github.com/immortalwrt/packages/trunk/net/gowebdav
-svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-firewall
+#svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-firewall
 svn export https://github.com/immortalwrt/immortalwrt/trunk/target/linux/generic/hack-5.10/952-net-conntrack-events-support-multiple-registrant.patch
 #svn export https://github.com/istoreos/istoreos/trunk/package/istoreos-files
 #kiddin9's packages
 
-git_sparse_clone master "https://github.com/kiddin9/openwrt-packages" "kinddin9" autocore luci-base luci-mod-status luci-mod-system luci-app-samba4
+git_sparse_clone master "https://github.com/kiddin9/openwrt-packages" "kinddin9" autocore luci-base luci-mod-status luci-mod-system luci-app-samba4 luci-app-firewall
 #firewall firewall4 luci-app-firewall
 
 rm -rf luci-app-netdata
@@ -204,7 +204,7 @@ mv -f libnftnl A-model/libnftnl
 mv -f firewall A-model/firewall
 mv -f firewall4 A-model/firewall4
 mv -f luci-app-firewall A-model/luci-app-firewall
-#mv -f 952-net-conntrack-events-support-multiple-registrant.patch .github/diy/target/linux/generic/hack-5.10/952-net-conntrack-events-support-multiple-registrant.patch
+mv -f 952-net-conntrack-events-support-multiple-registrant.patch .github/diy/target/linux/generic/hack-5.10
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
