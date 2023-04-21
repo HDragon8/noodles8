@@ -164,9 +164,9 @@ mv -f miniupnpd miniupnpd-iptables
 git_sparse_clone master "https://github.com/immortalwrt/packages" "immpkgs" net/mwol \
 net/sub-web net/dnsproxy net/haproxy net/v2raya net/cdnspeedtest net/keepalived \
 net/subconverter net/ngrokc net/oscam net/njitclient net/scutclient net/gost net/gowebdav \
-admin/bpytop libs/jpcre2 libs/wxbase libs/rapidjson libs/libcron libs/quickjspp libs/toml11 \
+libs/jpcre2 libs/wxbase libs/rapidjson libs/libcron libs/quickjspp libs/toml11 \
 utils/cpulimit utils/filebrowser utils/cups net/udp2raw net/msd_lite net/xfrpc net/bitsrunlogin-go \
-utils/phicomm-k3screenctrl net/apinger net/keepalived net/basicstation libs/sx1302_hal
+utils/phicomm-k3screenctrl net/apinger net/basicstation libs/sx1302_hal
 
 git_sparse_clone master "https://github.com/immortalwrt/immortalwrt" "immortal" package/kernel/rtl88x2bu \
 package/kernel/r8168 package/kernel/rtl8821cu package/kernel/rtl8189es package/emortal/autocore package/emortal/automount \
@@ -220,7 +220,7 @@ sed -i "/minisign:minisign/d" luci-app-dnscrypt-proxy2/Makefile
 sed -i 's/+libcap /+libcap +libcap-bin /' luci-app-openclash/Makefile
 sed -i 's/\(+luci-compat\)/\1 +luci-theme-argon/' luci-app-argon-config/Makefile
 sed -i 's/\(+luci-compat\)/\1 +luci-theme-design/' luci-app-design-config/Makefile
-sed -i 's/\(+luci-compat\)/\1 +luci-theme-argonne/' luci-app-argonne-config/Makefile
+#sed -i 's/\(+luci-compat\)/\1 +luci-theme-argonne/' luci-app-argonne-config/Makefile
 sed -i 's/ +uhttpd-mod-ubus//' luci-app-packet-capture/Makefile
 sed -i 's/	ip.neighbors/	luci.ip.neighbors/' luci-app-wifidog/luasrc/model/cbi/wifidog/wifidog_cfg.lua
 sed -i -e 's/nas/services/g' -e 's/NAS/Services/g' $(grep -rl 'nas\|NAS' luci-app-fileassistant)
@@ -235,6 +235,7 @@ rm -rf luci-app-wifischedule/po/zh_Hans
 cp -Rf luci-app-wifischedule/po/zh-cn luci-app-wifischedule/po/zh_Hans
 rm -rf luci-app-minidlna/po/zh_Hans
 cp -Rf luci-app-minidlna/po/zh-cn luci-app-minidlna/po/zh_Hans
+cp -Rf luci-app-wrtbwmon/po/zh_Hans luci-app-wrtbwmon/po/zh-cn
 
 #bash diy/create_acl_for_luci.sh -a >/dev/null 2>&1
 #bash diy/convert_translation.sh -a >/dev/null 2>&1
