@@ -10,7 +10,6 @@ LUCI_DEPENDS:=+appfilter
 
 PKG_NAME:=luci-app-appfilter
 PKG_VERSION:=5.0.1
-PKG_RELEASE:=$(AUTORELEASE)
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
