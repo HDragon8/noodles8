@@ -274,7 +274,7 @@ function get_valid_nodes()
 		e.id = e[".name"]
 		if e.type and e.remarks then
 			if e.protocol and (e.protocol == "_balancing" or e.protocol == "_shunt" or e.protocol == "_iface") then
-				e["remark"] = "%s：[%s] " % {i18n.translatef(e.type .. e.protocol), e.remarks}
+				e["remark"] = "%s：[%s] " % {e.type .. " " .. i18n.translatef(e.protocol), e.remarks}
 				e["node_type"] = "special"
 				nodes[#nodes + 1] = e
 			end
@@ -311,7 +311,7 @@ function get_node_remarks(n)
 	local remarks = ""
 	if n then
 		if n.protocol and (n.protocol == "_balancing" or n.protocol == "_shunt" or n.protocol == "_iface") then
-			remarks = "%s：[%s] " % {i18n.translatef(n.type .. n.protocol), n.remarks}
+			remarks = "%s：[%s] " % {n.type .. " " .. i18n.translatef(n.protocol), n.remarks}
 		else
 			local type2 = n.type
 			if (n.type == "V2ray" or n.type == "Xray") and n.protocol then
@@ -533,6 +533,44 @@ function exec(cmd, args, writer, timeout)
 		nixio.stdout:close()
 		os.exit(1)
 	end
+end
+
+function parseURL(url)
+	if not url or url == "" then
+		return nil
+	end
+	local pattern = "^(%w+)://"
+	local protocol = url:match(pattern)
+
+	if not protocol then
+		--error("Invalid URL: " .. url)
+		return nil
+	end
+
+	local auth_host_port = url:sub(#protocol + 4)
+	local auth_pattern = "^([^@]+)@"
+	local auth = auth_host_port:match(auth_pattern)
+	local username, password
+
+	if auth then
+		username, password = auth:match("^([^:]+):([^:]+)$")
+		auth_host_port = auth_host_port:sub(#auth + 2)
+	end
+
+	local host, port = auth_host_port:match("^([^:]+):(%d+)$")
+
+	if not host or not port then
+		--error("Invalid URL: " .. url)
+		return nil
+	end
+
+	return {
+		protocol = protocol,
+		username = username,
+		password = password,
+		host = host,
+		port = tonumber(port)
+	}
 end
 
 function compare_versions(ver1, comp, ver2)

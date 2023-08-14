@@ -7,7 +7,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=autocore
 PKG_FLAGS:=nonshared
-PKG_RELEASE:=67
+PKG_RELEASE:=76
 
 PKG_CONFIG_DEPENDS:= \
 	CONFIG_TARGET_bcm27xx \
@@ -24,7 +24,7 @@ define Package/autocore
     +TARGET_bcm27xx:bcm27xx-userland \
     +TARGET_bcm53xx:nvram \
     +(TARGET_mediatek_filogic||TARGET_mvebu):mhz \
-    +ethtool \
+    +TARGET_x86:ethtool \
     +TARGET_x86:lm-sensors
 endef
 
@@ -48,12 +48,6 @@ endif
 
 	$(INSTALL_DIR) $(1)/usr/share/rpcd/acl.d
 	$(CP) ./files/luci-mod-status-autocore.json $(1)/usr/share/rpcd/acl.d/
-
-ifeq ($(filter ipq806x%, $(TARGETID)),)
-	$(INSTALL_BIN) ./files/ethinfo $(1)/sbin/
-	$(INSTALL_DIR) $(1)/www/luci-static/resources/view/status/include
-	$(INSTALL_DATA) ./files/29_ethinfo.js $(1)/www/luci-static/resources/view/status/include/
-endif
 endef
 
 $(eval $(call BuildPackage,autocore))
