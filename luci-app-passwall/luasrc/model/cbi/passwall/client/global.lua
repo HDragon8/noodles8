@@ -7,6 +7,7 @@ local has_xray = api.finded_com("xray")
 local has_chnlist = api.fs.access("/usr/share/passwall/rules/chnlist")
 
 m = Map(appname)
+api.set_apply_on_parse(m)
 
 local nodes_table = {}
 for k, e in ipairs(api.get_valid_nodes()) do
@@ -278,12 +279,31 @@ if has_xray then
 end
 dns_mode:value("udp", translatef("Requery DNS By %s", "UDP"))
 
-o = s:taboption("DNS", ListValue, "v2ray_dns_mode", " ")
+o = s:taboption("DNS", ListValue, "xray_dns_mode", " ")
 o:value("tcp", "TCP")
-o:value("doh", "DoH", {dns_mode = "sing-box"})
-o:value("tcp+doh", "TCP + DoH (" .. translate("A/AAAA type") .. ")", {dns_mode = "xray"})
-o:depends("dns_mode", "sing-box")
+o:value("tcp+doh", "TCP + DoH (" .. translate("A/AAAA type") .. ")")
 o:depends("dns_mode", "xray")
+o.cfgvalue = function(self, section)
+	return m:get(section, "v2ray_dns_mode")
+end
+o.write = function(self, section, value)
+	if dns_mode:formvalue(section) == "xray" then
+		return m:set(section, "v2ray_dns_mode", value)
+	end
+end
+
+o = s:taboption("DNS", ListValue, "singbox_dns_mode", " ")
+o:value("tcp", "TCP")
+o:value("doh", "DoH")
+o:depends("dns_mode", "sing-box")
+o.cfgvalue = function(self, section)
+	return m:get(section, "v2ray_dns_mode")
+end
+o.write = function(self, section, value)
+	if dns_mode:formvalue(section) == "sing-box" then
+		return m:set(section, "v2ray_dns_mode", value)
+	end
+end
 
 o = s:taboption("DNS", Value, "socks_server", translate("Socks Server"), translate("Make sure socks service is available on this address."))
 for k, v in pairs(socks_table) do o:value(v.id, v.remarks) end
@@ -310,8 +330,9 @@ o:value("208.67.222.222", "208.67.222.222 (OpenDNS)")
 o:depends({dns_mode = "dns2socks"})
 o:depends({dns_mode = "dns2tcp"})
 o:depends({dns_mode = "udp"})
-o:depends({v2ray_dns_mode = "tcp"})
-o:depends({v2ray_dns_mode = "tcp+doh"})
+o:depends({xray_dns_mode = "tcp"})
+o:depends({xray_dns_mode = "tcp+doh"})
+o:depends({singbox_dns_mode = "tcp"})
 
 ---- DoH
 o = s:taboption("DNS", Value, "remote_dns_doh", translate("Remote DNS DoH"))
@@ -326,8 +347,8 @@ o:value("https://dns.adguard.com/dns-query,176.103.130.130", "AdGuard")
 o:value("https://doh.libredns.gr/dns-query,116.202.176.26", "LibreDNS")
 o:value("https://doh.libredns.gr/ads,116.202.176.26", "LibreDNS (No Ads)")
 o.validate = doh_validate
-o:depends({v2ray_dns_mode = "doh"})
-o:depends({v2ray_dns_mode = "tcp+doh"})
+o:depends({xray_dns_mode = "tcp+doh"})
+o:depends({singbox_dns_mode = "doh"})
 
 o = s:taboption("DNS", Value, "dns_client_ip", translate("EDNS Client Subnet"))
 o.description = translate("Notify the DNS server when the DNS query is notified, the location of the client (cannot be a private IP address).") .. "<br />" ..
@@ -361,6 +382,17 @@ o.rmempty = false
 if api.is_finded("chinadns-ng") then
 	o = s:taboption("DNS", Flag, "chinadns_ng", translate("ChinaDNS-NG"), translate("The effect is better, but will increase the memory."))
 	o.default = "0"
+	chinadns_ng_default_tag = s:taboption("DNS", ListValue, "chinadns_ng_default_tag", translate("ChinaDNS-NG Domain Default Tag"))
+	chinadns_ng_default_tag.default = "smart"
+	chinadns_ng_default_tag:value("smart", translate("Smart DNS"))
+	chinadns_ng_default_tag:value("gfw", translate("Remote DNS"))
+	chinadns_ng_default_tag:value("chn", translate("Direct DNS"))
+	chinadns_ng_default_tag.description = "<ul>"
+			.. "<li>" .. translate("Forward to both remote and direct DNS, if the direct DNS resolution result is a mainland China ip, then use the direct result, otherwise use the remote result") .. "</li>"
+			.. "<li>" .. translate("Remote DNS can avoid more DNS leaks, but some domestic domain names maybe to proxy!") .. "</li>"
+			.. "<li>" .. translate("Direct DNS Internet experience may be better, but DNS will be leaked!") .. "</li>"
+			.. "</ul>"
+	chinadns_ng_default_tag:depends("chinadns_ng", true)
 	o:depends({dns_mode = "dns2socks"})
 	o:depends({dns_mode = "dns2tcp"})
 	o:depends({dns_mode = "sing-box", remote_fakedns = false})

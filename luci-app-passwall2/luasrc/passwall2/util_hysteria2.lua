@@ -10,22 +10,22 @@ function gen_config_server(node)
 			cert = node.tls_certificateFile,
 			key = node.tls_keyFile,
 		},
-		obfs = {
+		obfs = (node.hysteria2_obfs) and {
 			type = "salamander",
 			salamander = {
 				password = node.hysteria2_obfs
 			}
-		},
+		} or nil,
 		auth = {
 			type = "password",
 			password = node.hysteria2_auth_password
 		},
-		bandwidth = {
-			up = node.hysteria2_up_mbps and node.hysteria2_up_mbps .. " mbps" or "1 gbps",
-			down = node.hysteria2_down_mbps and node.hysteria2_down_mbps .. " mbps" or "1 gbps",
-		},
+		bandwidth = (node.hysteria2_up_mbps or node.hysteria2_down_mbps) and {
+			up = node.hysteria2_up_mbps and node.hysteria2_up_mbps .. " mbps" or nil,
+			down = node.hysteria2_down_mbps and node.hysteria2_down_mbps .. " mbps" or nil
+		} or nil,
 		ignoreClientBandwidth = (node.hysteria2_ignoreClientBandwidth == "1") and true or false,
-		disable_udp = (node.hysteria2_udp == "0") and true or false,
+		disableUDP = (node.hysteria2_udp == "0") and true or false,
 	}
 	return config
 end
@@ -65,12 +65,12 @@ function gen_config(var)
 				hopInterval = node.hysteria2_hop_interval and node.hysteria2_hop_interval .. "s" or "30s"
 			}
 		},
-		obfs = {
+		obfs = (node.hysteria2_obfs) and {
 			type = "salamander",
 			salamander = {
 				password = node.hysteria2_obfs
 			}
-		},
+		} or nil,
 		auth = node.hysteria2_auth_password,
 		tls = {
 			sni = node.tls_serverName,
@@ -82,23 +82,22 @@ function gen_config(var)
 			maxIdleTimeout = (node.hysteria2_idle_timeout) and tonumber(node.hysteria2_idle_timeout) or nil,
 			disablePathMTUDiscovery = (node.hysteria2_disable_mtu_discovery) and true or false,
 		},
-		bandwidth = {
-			up = node.hysteria2_up_mbps and node.hysteria2_up_mbps .. " mbps" or "100 mbps",
-			down = node.hysteria2_down_mbps and node.hysteria2_down_mbps .. " mbps" or "100 mbps"
-		},
+		bandwidth = (node.hysteria2_up_mbps or node.hysteria2_down_mbps) and {
+			up = node.hysteria2_up_mbps and node.hysteria2_up_mbps .. " mbps" or nil,
+			down = node.hysteria2_down_mbps and node.hysteria2_down_mbps .. " mbps" or nil
+		} or nil,
 		fast_open = (node.fast_open == "1") and true or false,
-		lazy = true,
+		lazy = (node.hysteria2_lazy_start == "1") and true or false,
 		socks5 = (local_socks_address and local_socks_port) and {
 			listen = local_socks_address .. ":" .. local_socks_port,
 			username = (local_socks_username and local_socks_password) and local_socks_username or nil,
 			password = (local_socks_username and local_socks_password) and local_socks_password or nil,
-			disable_udp = false,
+			disableUDP = false,
 		} or nil,
 		http = (local_http_address and local_http_port) and {
 			listen = local_http_address .. ":" .. local_http_port,
 			username = (local_http_username and local_http_password) and local_http_username or nil,
 			password = (local_http_username and local_http_password) and local_http_password or nil,
-			disable_udp = false,
 		} or nil
 	}
 

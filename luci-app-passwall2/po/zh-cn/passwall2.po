@@ -139,6 +139,15 @@ msgstr "用于 DNS 查询时通知 DNS 服务器，客户端所在的地理位�
 msgid "This feature requires the DNS server to support the Edns Client Subnet (RFC7871)."
 msgstr "此功能需要 DNS 服务器支持 EDNS Client Subnet（RFC7871）。"
 
+msgid "Remote DNS Outbound"
+msgstr "远程 DNS 出站"
+
+msgid "Remote"
+msgstr "远程"
+
+msgid "Direct"
+msgstr "直连"
+
 msgid "Direct Query Strategy"
 msgstr "直连查询策略"
 
@@ -190,17 +199,17 @@ msgstr "你确定要隐藏吗？"
 msgid "DNS related issues:"
 msgstr "DNS相关问题："
 
-msgid "Certain browsers such as Chrome have built-in DNS service, which may affect DNS resolution settings. You can go to "Settings -> Privacy and security -> Use secure DNS" menu to turn it off."
-msgstr "某些浏览器如Chrome等内置此功能,这会影响设置的DNS解析。您可以进入"设置->私隐和安全->使用安全DNS"菜单,将其关闭。"
+msgid "Certain browsers such as Chrome have built-in DNS service, which may affect DNS resolution settings. You can go to 'Settings -> Privacy and security -> Use secure DNS' menu to turn it off."
+msgstr "某些浏览器如Chrome等内置此功能,这会影响设置的DNS解析。您可以进入 '设置->私隐和安全->使用安全DNS' 菜单,将其关闭。"
 
 msgid "If you are unable to access the internet after reboot, please try clearing the cache of your terminal devices (make sure to close all open browser application windows first, this step is especially important):"
 msgstr "如果在重启后无法上网,请尝试清除终端设备的缓存（先关闭所有正在使用的浏览器应用程序，这一步尤其重要）："
 
-msgid "For Windows systems, open Command Prompt and run the command "ipconfig /flushdns"."
-msgstr "对于Windows系统,请在命令提示符中运行命令"ipconfig /flushdns"."
+msgid "For Windows systems, open Command Prompt and run the command 'ipconfig /flushdns'."
+msgstr "对于Windows系统,请在命令提示符中运行命令 'ipconfig /flushdns'."
 
-msgid "For Mac systems, open Terminal and run the command "sudo killall -HUP mDNSResponder"."
-msgstr "对于Mac系统，在终端中运行命令"sudo killall -HUP mDNSResponder"."
+msgid "For Mac systems, open Terminal and run the command 'sudo killall -HUP mDNSResponder'."
+msgstr "对于Mac系统，在终端中运行命令 'sudo killall -HUP mDNSResponder'."
 
 msgid "For mobile devices, you can clear it by reconnecting to the network, such as toggling Airplane Mode and reconnecting to WiFi."
 msgstr "对于移动设备,可通过重新接入网络的方式清除。比如开关一次飞行模式,重新连接WiFi。"
@@ -1422,3 +1431,15 @@ msgstr "协议参数。 如果启用会随机浪费流量。"
 
 msgid "Protocol parameter. Enable length block encryption."
 msgstr "协议参数。启用长度块加密。"
+
+msgid "ECH Config"
+msgstr "ECH 密钥"
+
+msgid "ECH Key"
+msgstr "ECH 配置"
+
+msgid "PQ signature schemes"
+msgstr "后量子对等证书签名方案"
+
+msgid "Disable adaptive sizing of TLS records"
+msgstr "禁用 TLS 记录的自适应大小调整"

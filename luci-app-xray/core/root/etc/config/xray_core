@@ -1,0 +1,9 @@
+config general
+	list blocked_domain_rules 'geosite:category-ads'
+	list bypassed_domain_rules 'geosite:cn'
+	list forwarded_domain_rules 'geosite:geolocation-!cn'
+	list geoip_direct_code_list 'cn'
+	list geoip_direct_code_list_v6 'cn'
+	list lan_ifaces 'br-lan'
+	option transparent_proxy_enable '1'
+	option xray_bin '/usr/bin/xray'
