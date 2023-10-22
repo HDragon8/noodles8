@@ -42,7 +42,6 @@ git clone --depth 1 https://github.com/NateLol/luci-app-beardropper
 git clone --depth 1 https://github.com/yaof2/luci-app-ikoolproxy
 git clone --depth 1 https://github.com/project-lede/luci-app-godproxy
 git clone --depth 1 https://github.com/sbwml/openwrt-alist && mvdir openwrt-alist
-git clone --depth 1 https://github.com/tty228/luci-app-serverchan
 git clone --depth 1 https://github.com/tty228/luci-app-wechatpush
 git clone --depth 1 https://github.com/4IceG/luci-app-sms-tool smstool && mvdir smstool
 git clone --depth 1 https://github.com/shanglanxin/luci-app-homebridge
@@ -94,7 +93,7 @@ git clone --depth 1 https://github.com/Huangjoe123/luci-app-eqos
 git clone --depth 1 https://github.com/sirpdboy/luci-app-lucky
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-lucky lucik && mv -n lucik/luci-app-lucky ./ ; rm -rf lucik
 git clone --depth 1 https://github.com/Hyy2001X/AutoBuild-Packages && rm -rf AutoBuild-Packages/luci-app-adguardhome && mvdir AutoBuild-Packages
-git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go ddns-go && mvdir ddns-go
+git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go ddns-go1 && mvdir ddns-go1
 #git_clone https://github.com/sirpdboy/netspeedtest && mv -n netspeedtest/luci-app-netspeedtest ./ ; rm -rf netspeedtest
 git clone --depth 1 https://github.com/sirpdboy/netspeedtest && mvdir netspeedtest
 git clone --depth 1 https://github.com/HDragon8/add_openwrt_Build_name
@@ -138,20 +137,23 @@ svn export https://github.com/sbilly/netmaker-openwrt/trunk/netmaker
 #svn export https://github.com/openwrt/packages/trunk/net/shadowsocks-libev
 svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-timewol
 #svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-unblockneteasemusic
-svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-xunlei
+#svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-xunlei
 svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-gowebdav
 svn export https://github.com/immortalwrt/packages/trunk/net/gowebdav
 #svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-firewall
 #svn export https://github.com/immortalwrt/immortalwrt/trunk/target/linux/generic/hack-5.10/952-net-conntrack-events-support-multiple-registrant.patch
 #svn export https://github.com/istoreos/istoreos/trunk/package/istoreos-files
 #kiddin9's packages
-
-git_sparse_clone master "https://github.com/kiddin9/openwrt-packages" "kinddin9" autocore luci-base luci-mod-status luci-mod-system luci-app-samba4
+#git_sparse_clone master "https://github.com/kiddin9/openwrt-packages" "kinddin9" autocore luci-base luci-mod-status luci-mod-system luci-app-samba4
 #firewall firewall4 luci-app-firewall
 # fullcone-nat
 #git_sparse_clone istoreos-22.03-test "https://github.com/istoreos/istoreos" "isapp" package/network/utils/nftables package/libs/libnftnl \
 #package/network/config/firewall package/network/config/firewall4 \
 #package/kernel/fullconenat-nft package/kernel/fullconenat
+
+#NAS xunlei
+rm -rf luci-app-xunlei
+git_sparse_clone main "https://github.com/gngpp/nas-xunlei" "nasxunlei" openwrt/xunlei openwrt/luci-app-xunlei
 
 rm -rf luci-app-netdata
 
@@ -200,11 +202,11 @@ rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 #删除没有依赖的包
 rm -rf luci-app-noddos
 #移动luci-base、luci-mod-status、luci-mod-system到A-model文件夹
-mkdir A-model
-mv -f luci-base A-model/luci-base
-mv -f luci-mod-status A-model/luci-mod-status
-mv -f luci-mod-system A-model/luci-mod-system
-mv -f luci-app-samba4 A-model/luci-app-samba4
+#mkdir A-model
+#mv -f luci-base A-model/luci-base
+#mv -f luci-mod-status A-model/luci-mod-status
+#mv -f luci-mod-system A-model/luci-mod-system
+#mv -f luci-app-samba4 A-model/luci-app-samba4
 #mv -f nftables A-model/nftables
 #mv -f libnftnl A-model/libnftnl
 #mv -f firewall A-model/firewall
