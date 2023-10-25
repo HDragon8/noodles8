@@ -562,9 +562,3 @@ msgstr ""
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:225
 msgid "all"
 msgstr ""
-
-#~ msgid "Loading"
-#~ msgstr "加载中"
-
-#~ msgid "VPN"
-#~ msgstr "VPN"

@@ -338,7 +338,8 @@ msgstr "Protokol"
 
 #: applications/luci-app-pbr/htdocs/luci-static/resources/pbr/status.js:236
 msgid "Received empty tid/mark or interface name when setting up routing"
-msgstr "Při nastavování směrování obdrženo prázdné tid/mark nebo název rozhraní"
+msgstr ""
+"Při nastavování směrování obdrženo prázdné tid/mark nebo název rozhraní"
 
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:206
 msgid "Remote addresses / domains"
@@ -600,18 +601,3 @@ msgstr "Konfigurace webového rozhraní (Web UI)"
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:225
 msgid "all"
 msgstr "vše"
-
-#~ msgid "%s (disabled)"
-#~ msgstr "%s (zakázáno)"
-
-#~ msgid "%s (strict mode)"
-#~ msgstr "%s (přísný režim)"
-
-#~ msgid "%s is not installed or not found"
-#~ msgstr "%s není nainstalován nebo nenalezen"
-
-#~ msgid "Configuration"
-#~ msgstr "Nastavení"
-
-#~ msgid "VPN"
-#~ msgstr "VPN"

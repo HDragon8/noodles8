@@ -562,6 +562,3 @@ msgstr ""
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:225
 msgid "all"
 msgstr ""
-
-#~ msgid "VPN"
-#~ msgstr "VPN"

@@ -562,15 +562,3 @@ msgstr ""
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:225
 msgid "all"
 msgstr ""
-
-#~ msgid "Comment"
-#~ msgstr "Коментар"
-
-#~ msgid "Configuration"
-#~ msgstr "Конфигурация"
-
-#~ msgid "Loading"
-#~ msgstr "Зареждане"
-
-#~ msgid "VPN"
-#~ msgstr "VPN"

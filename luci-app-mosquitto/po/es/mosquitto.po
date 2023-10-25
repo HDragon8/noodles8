@@ -23,10 +23,10 @@ msgstr "Permitir conectarse sin proporcionar un nombre de usuario y contraseña"
 #: applications/luci-app-mosquitto/luasrc/model/cbi/mosquitto.lua:163
 msgid ""
 "Attempt to notify the local and remote broker of connection status, defaults "
-"to $SYS/broker/connections/&lt;clientid&gt;/state"
+"to $SYS/broker/connections/<clientid>/state"
 msgstr ""
-"Intenta notificar al agente local y remoto sobre el estado de la conexión; "
-"el valor predeterminado es $SYS/broker/connections/<clientid>/state"
+"Intente notificar al intermediario local y remoto sobre el estado de la "
+"conexión; el valor predeterminado es $SYS/broker/connections/<clientid>/state"
 
 #: applications/luci-app-mosquitto/luasrc/model/cbi/mosquitto.lua:177
 msgid "Automatic, but no restarts"
@@ -431,11 +431,3 @@ msgstr "tema"
 #: applications/luci-app-mosquitto/luasrc/model/cbi/mosquitto.lua:138
 msgid "unique name for this bridge configuration"
 msgstr "nombre único para esta configuración de puente"
-
-#~ msgid ""
-#~ "Attempt to notify the local and remote broker of connection status, "
-#~ "defaults to $SYS/broker/connections/<clientid>/state"
-#~ msgstr ""
-#~ "Intente notificar al intermediario local y remoto sobre el estado de la "
-#~ "conexión; el valor predeterminado es $SYS/broker/connections/<clientid>/"
-#~ "state"

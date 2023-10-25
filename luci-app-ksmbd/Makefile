@@ -3,7 +3,7 @@
 include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=Network Shares - Ksmbd the SMB kernel fileserver
-LUCI_DEPENDS:=+luci-base +ksmbd-server
+LUCI_DEPENDS:=+ksmbd-server
 
 include $(TOPDIR)/feeds/luci/luci.mk
 

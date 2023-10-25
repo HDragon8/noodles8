@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LuCI: simple-adblock\n"
 "POT-Creation-Date: 2017-12-07 14:00+0300\n"
-"PO-Revision-Date: 2023-10-10 00:59+0000\n"
+"PO-Revision-Date: 2023-09-13 09:53+0000\n"
 "Last-Translator: st7105 <st7105@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsadblock-fast/ru/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.0.1-dev\n"
 "Project-Info: Это технический перевод, не дословный. Главное-удобный русский "
 "интерфейс, все проверялось в графическом режиме, совместим с другими apps\n"
 
@@ -216,7 +216,7 @@ msgstr "Ошибка"
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/adblock-fast/status.js:293
 msgid "Errors encountered, please check the %sREADME%s"
-msgstr "Обнаружены ошибки, сверьтесь с %sREADME%s"
+msgstr ""
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/adblock-fast/status.js:117
 msgid "Fail"
@@ -248,7 +248,7 @@ msgstr "Не удалось создать каталог output/cache/gzip"
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/adblock-fast/status.js:278
 msgid "Failed to detect format %s"
-msgstr "Не удалось определить формат %s"
+msgstr ""
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/adblock-fast/status.js:271
 msgid "Failed to download %s"
@@ -276,7 +276,7 @@ msgstr "Не удалось оптимизировать файл данных"
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/adblock-fast/status.js:273
 msgid "Failed to parse %s"
-msgstr "Не удалось разобрать %s"
+msgstr ""
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/adblock-fast/status.js:272
 msgid "Failed to parse Config Update file"
@@ -400,7 +400,7 @@ msgstr "Отсутствие поддержки HTTPS/SSL на устройст�
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/adblock-fast/status.js:280
 msgid "No blocked list URLs nor blocked-domains enabled"
-msgstr "Нет заблокированных URL-адресов и доменов"
+msgstr ""
 
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/adblock-fast/status.js:176
 msgid "Not installed or not found"
@@ -624,342 +624,3 @@ msgstr "ничего"
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/view/adblock-fast/overview.js:126
 msgid "unbound adblock list"
 msgstr "несвязанный список adblock"
-
-#~ msgid "Errors encountered, please check the %sREADME%s!"
-#~ msgstr "Возникли ошибки, проверьте %sREADME%s!"
-
-#~ msgid "Failed to parse"
-#~ msgstr "Не удалось выполнить разбор"
-
-#~ msgid "Allowed Domain URLs"
-#~ msgstr "Разрешённые URL-адреса доменов"
-
-#~ msgid "Allowed and Blocked Lists Management"
-#~ msgstr "Управление списками разрешения и блокировки"
-
-#~ msgid "Blocked AdBlockPlus-style URLs"
-#~ msgstr "Заблокированные URL-адреса в стиле AdBlockPlus"
-
-#~ msgid "Blocked Domain URLs"
-#~ msgstr "URL-адреса блокируемых доменов"
-
-#~ msgid "Blocked Hosts URLs"
-#~ msgstr "URL-адреса блокируемых хостов"
-
-#~ msgid "Enables debug output to /tmp/simple-adblock.log."
-#~ msgstr "Включает вывод отладочной информации в /tmp/simple-adblock.log."
-
-#~ msgid "Grant UCI and file access for luci-app-simple-adblock"
-#~ msgstr "Предоставить luci-app-simple-adblock доступ к UCI и файлам"
-
-#~ msgid "Simple AdBlock"
-#~ msgstr "Простой AdBlock"
-
-#~ msgid "Simple AdBlock - Configuration"
-#~ msgstr "Simple AdBlock - Конфигурация"
-
-#~ msgid "Simple AdBlock - Status"
-#~ msgstr "Simple AdBlock - Статус"
-
-#~ msgid "URLs to lists of AdBlockPlus-style formatted domains to be blocked."
-#~ msgstr "URL-адреса списков блокируемых доменов в стиле AdBlockPlus."
-
-#~ msgid "URLs to lists of domains to be allowed."
-#~ msgstr "URL списков разрешаемых доменов."
-
-#~ msgid "URLs to lists of domains to be blocked."
-#~ msgstr "URL списков блокируемых доменов."
-
-#~ msgid "URLs to lists of hosts to be blocked."
-#~ msgstr "URL списков блокируемых хостов."
-
-#~ msgid "config (%s) validation failure!"
-#~ msgstr "ошибка проверки конфигурации (%s)!"
-
-#~ msgid "disabled"
-#~ msgstr "отключено"
-
-#~ msgid ""
-#~ "dnsmasq ipset support is enabled, but dnsmasq is either not installed or "
-#~ "installed dnsmasq does not support ipset"
-#~ msgstr ""
-#~ "поддержка dnsmasq ipset включена, но dnsmasq либо не установлен, либо "
-#~ "установленный dnsmasq не поддерживает ipset"
-
-#~ msgid ""
-#~ "dnsmasq ipset support is enabled, but ipset is either not installed or "
-#~ "installed ipset does not support '%s' type"
-#~ msgstr ""
-#~ "поддержка dnsmasq ipset включена, но ipset либо не установлен, либо "
-#~ "установленный ipset не поддерживает тип '%s'"
-
-#~ msgid ""
-#~ "dnsmasq nft set support is enabled, but dnsmasq is either not installed "
-#~ "or installed dnsmasq does not support nft set"
-#~ msgstr ""
-#~ "поддержка dnsmasq nft set включена, но dnsmasq либо не установлен, либо "
-#~ "установленный dnsmasq не поддерживает nft set"
-
-#~ msgid "dnsmasq nft sets support is enabled, but nft is not installed"
-#~ msgstr "поддержка наборов dnsmasq nft включена, но nft не установлен"
-
-#~ msgid "failed to access shared memory"
-#~ msgstr "не удалось получить доступ к общей памяти"
-
-#~ msgid "failed to create '%s' file"
-#~ msgstr "не удалось создать файл '%s'"
-
-#~ msgid "failed to create block-list or restart DNS resolver"
-#~ msgstr "не удалось создать чёрный список или перезапустить службу DNS"
-
-#~ msgid "failed to create compressed cache"
-#~ msgstr "не удалось создать сжатый кэш"
-
-#~ msgid "failed to create directory for %s file"
-#~ msgstr "не удалось создать каталог для файла %s"
-
-#~ msgid "failed to create output/cache/gzip file directory"
-#~ msgstr "не удалось создать каталог файлов output/cache/gzip"
-
-#~ msgid "failed to download"
-#~ msgstr "не удалось загрузить"
-
-#~ msgid "failed to download Config Update file"
-#~ msgstr "не удалось загрузить файл обновления конфигурации"
-
-#~ msgid "failed to format data file"
-#~ msgstr "не удалось отформатировать файл данных"
-
-#~ msgid "failed to move '%s' to '%s'"
-#~ msgstr "не удалось переместить '%s' в '%s'"
-
-#~ msgid "failed to move temporary data file to '%s'"
-#~ msgstr "не удалось переместить временный файл данных в '%s'"
-
-#~ msgid "failed to optimize data file"
-#~ msgstr "не удалось оптимизировать файл данных"
-
-#~ msgid "failed to parse"
-#~ msgstr "не удалось обработать"
-
-#~ msgid "failed to parse Config Update file"
-#~ msgstr "не удалось обработать файл обновления конфигурации"
-
-#~ msgid "failed to process allow-list"
-#~ msgstr "не удалось обработать список разрешения"
-
-#~ msgid "failed to reload/restart DNS resolver"
-#~ msgstr "не удалось перезапустить службу DNS"
-
-#~ msgid "failed to remove temporary files"
-#~ msgstr "не удалось удалить временные файлы"
-
-#~ msgid "failed to restart/reload DNS resolver"
-#~ msgstr "не удалось перезапустить службу DNS"
-
-#~ msgid "failed to sort data file"
-#~ msgstr "не удалось отсортировать файл данных"
-
-#~ msgid "failed to stop %s"
-#~ msgstr "не удалось остановить %s"
-
-#~ msgid "failed to unpack compressed cache"
-#~ msgstr "не удалось распаковать сжатый кэш"
-
-#~ msgid "no HTTPS/SSL support on device"
-#~ msgstr "нет поддержки HTTPS/SSL на устройстве"
-
-#~ msgid "some recommended packages are missing"
-#~ msgstr "некоторые рекомендуемые пакеты отсутствуют"
-
-#~ msgid "the %s failed to discover WAN gateway"
-#~ msgstr "%s не удалось обнаружить WAN-шлюз"
-
-#~ msgid ""
-#~ "use of external dnsmasq config file detected, please set '%s' option to "
-#~ "'%s'"
-#~ msgstr ""
-#~ "обнаружено использование внешнего файла конфигурации dnsmasq, пожалуйста, "
-#~ "установите опцию '%s' на '%s'"
-
-#~ msgid "Version: %s"
-#~ msgstr "Версия: %s"
-
-#~ msgid "The %s service failed to discover WAN gateway!"
-#~ msgstr "Службе %s не удалось обнаружить шлюз WAN!"
-
-#~ msgid "Unable to create directory for '%s'"
-#~ msgstr "Не удалось создать каталог для '%s'"
-
-#~ msgid "Downloading"
-#~ msgstr "Скачивание"
-
-#~ msgid "%s Error: %s"
-#~ msgstr "%s Ошибка: %s"
-
-#~ msgid "%s Error: %s %s"
-#~ msgstr "%s Ошибка: %s %s"
-
-#~ msgid "Cache file containing %s domains found."
-#~ msgstr "Найден кэш-файл, содержащий %s доменов."
-
-#~ msgid "Collected Errors"
-#~ msgstr "Найденные ошибки"
-
-#~ msgid "Configuration"
-#~ msgstr "Конфигурация"
-
-#~ msgid "DNSMASQ Additional Hosts"
-#~ msgstr "Дополнительные хосты DNSMASQ"
-
-#~ msgid "DNSMASQ Config"
-#~ msgstr "Конфигурация DNSMASQ"
-
-#~ msgid "DNSMASQ Servers File"
-#~ msgstr "Файл серверов DNSMASQ"
-
-#~ msgid "Delay (in seconds) for on-boot start"
-#~ msgstr "Задержка (в секундах) запуска службы при загрузке"
-
-#~ msgid "Info"
-#~ msgstr "Информация"
-
-#~ msgid "Loading"
-#~ msgstr "Загрузка"
-
-#~ msgid "Message"
-#~ msgstr "Сообщение"
-
-#~ msgid ""
-#~ "Pick the DNS resolution option to create the adblock list for, see the "
-#~ "%sREADME%s for details."
-#~ msgstr ""
-#~ "Выбор службы DNS, для которой будет создан список блокировки. "
-#~ "Дополнительная информация в %sREADME%s."
-
-#~ msgid "Run service after set delay on boot."
-#~ msgstr "Запуск службы при загрузке системы после установленной задержки."
-
-#~ msgid "Service Status [%s %s]"
-#~ msgstr "Статус службы [%s %s]"
-
-#~ msgid "Simple AdBlock Settings"
-#~ msgstr "Настройки Simple AdBlock"
-
-#~ msgid "Success"
-#~ msgstr "Успех"
-
-#~ msgid "Task"
-#~ msgstr "Задача"
-
-#~ msgid "Unbound AdBlock List"
-#~ msgstr "Список AdBlock Unbound"
-
-#~ msgid "DNSMASQ IP Set"
-#~ msgstr "Установка IP DNSMASQ"
-
-#~ msgid "%s is blocking %s domains (with %s)."
-#~ msgstr "%s блокирует %s домены (с %s)."
-
-#~ msgid "Blacklisted Domain URLs"
-#~ msgstr "URL ссылки Черных<br />списков доменов"
-
-#~ msgid "Blacklisted Domains"
-#~ msgstr "Черный список доменов"
-
-#~ msgid "Blacklisted Hosts URLs"
-#~ msgstr "URL ссылки Черных<br />списков хостов"
-
-#~ msgid "Individual domains to be blacklisted."
-#~ msgstr "Отдельные домены должны быть в черном списке."
-
-#~ msgid "Individual domains to be whitelisted."
-#~ msgstr "Отдельные домены должны быть в белом списке."
-
-#~ msgid "URLs to lists of domains to be blacklisted."
-#~ msgstr "URL-адреса списков доменов, которые должны быть в черном списке."
-
-#~ msgid "URLs to lists of domains to be whitelisted."
-#~ msgstr "URL-адреса списков доменов, которые должны быть в белом списке."
-
-#~ msgid "URLs to lists of hosts to be blacklisted."
-#~ msgstr "URL-адреса списков хостов, которые должны быть в черном списке."
-
-#~ msgid "Whitelist and Blocklist Management"
-#~ msgstr "Белый и черный списки управления"
-
-#~ msgid "Whitelisted Domain URLs"
-#~ msgstr "URL ссылки Белых списков доменов"
-
-#~ msgid "Whitelisted Domains"
-#~ msgstr "Белый список доменов"
-
-#~ msgid "Grant UCI access for luci-app-simple-adblock"
-#~ msgstr "Предоставить UCI доступ для luci-app-simple-adblock"
-
-#~ msgid ""
-#~ "Pick the DNS resolution option to create the adblock list for, see the"
-#~ msgstr ""
-#~ "Выберите параметр разрешения DNS, для которого создается список adblock, "
-#~ "см."
-
-#~ msgid "Pick the LED not already used in"
-#~ msgstr "Выберите LED не используется на странице"
-
-#~ msgid "Please note that"
-#~ msgstr "Обратите внимание, что"
-
-#~ msgid "README"
-#~ msgstr "Описание"
-
-#~ msgid "System LED Configuration"
-#~ msgstr "Настройка LED индикации системы."
-
-#~ msgid "for details."
-#~ msgstr "для деталей."
-
-#~ msgid "is not supported on this system."
-#~ msgstr "не поддерживается в этой системе."
-
-#~ msgid "Enable/Start"
-#~ msgstr "Включить/Старт"
-
-#~ msgid "Reload"
-#~ msgstr "Перезапустить"
-
-#~ msgid "Service is disabled/stopped"
-#~ msgstr "Сервис выключен/остановлен"
-
-#~ msgid "Service is enabled/started"
-#~ msgstr "Сервис включен/запущен"
-
-#~ msgid "Service started with error"
-#~ msgstr "Служба запущена с ошибкой"
-
-#~ msgid "Stop/Disable"
-#~ msgstr "Стоп/Отключить"
-
-#~ msgid "Controls system log and console output verbosity"
-#~ msgstr "Детальная настройка записи событий в системный журнал."
-
-#~ msgid "Forces Router DNS use on local devices, also known as DNS Hijacking"
-#~ msgstr ""
-#~ "Назначить DNS роутера всем локальным устройствам, методом DNS Hijacking."
-
-#~ msgid "Individual domains to be blacklisted"
-#~ msgstr "Домены добавленные пользователем в Черный список."
-
-#~ msgid "Individual domains to be whitelisted"
-#~ msgstr "Домены добавленные пользователем в Белый список."
-
-#~ msgid "Start Simple Adblock service"
-#~ msgstr "Запуск сервиса Simple Adblock"
-
-#~ msgid "URLs to lists of domains to be blacklisted"
-#~ msgstr "URL ссылки Черных списков доменов."
-
-#~ msgid "URLs to lists of domains to be whitelisted"
-#~ msgstr "URL ссылки Белых списков доменов."
-
-#~ msgid "URLs to lists of hosts to be blacklisted"
-#~ msgstr "URL ссылки Черных списков хостов."

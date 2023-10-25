@@ -593,12 +593,3 @@ msgstr "없음"
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/view/adblock-fast/overview.js:126
 msgid "unbound adblock list"
 msgstr ""
-
-#~ msgid "Configuration"
-#~ msgstr "설정"
-
-#~ msgid "Info"
-#~ msgstr "정보"
-
-#~ msgid "Loading"
-#~ msgstr "로드 중"

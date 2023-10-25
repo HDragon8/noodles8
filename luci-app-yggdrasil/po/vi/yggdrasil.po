@@ -95,8 +95,8 @@ msgid ""
 "\"Peers\" section instead."
 msgstr ""
 "Danh sách các chuỗi kết nối cho các kết nối ngang hàng bên ngoài ở định dạng "
-"URI, được sắp xếp theo giao diện nguồn, ví dụ: { \"eth0\": [ tcp://a.b.c.d:e "
-"] }. Lưu ý rằng SOCKS ngang hàng sẽ KHÔNG bị ảnh hưởng bởi tùy chọn này và "
+"URI, được sắp xếp theo giao diện nguồn, ví dụ: { \"eth0\": [ tcp://a.b.c.d:"
+"e ] }. Lưu ý rằng SOCKS ngang hàng sẽ KHÔNG bị ảnh hưởng bởi tùy chọn này và "
 "thay vào đó nên đi vào phần \"Bạn bè\"."
 
 #: applications/luci-app-yggdrasil/htdocs/luci-static/resources/view/yggdrasil/peers.js:12
@@ -126,8 +126,8 @@ msgstr ""
 "Listen addresses for incoming connections. You will need to add listeners in "
 "order to accept incoming peerings from non-local nodes. Multicast peer "
 "discovery will work regardless of any listeners set here. Each listener "
-"should be specified in URI format as above, e.g. tcp://0.0.0.0:0 or "
-"tcp://[::]:0 to listen on all interfaces."
+"should be specified in URI format as above, e.g. tcp://0.0.0.0:0 or tcp://"
+"[::]:0 to listen on all interfaces."
 
 #: applications/luci-app-yggdrasil/htdocs/luci-static/resources/view/yggdrasil/settings.js:51
 msgid "Listen for beacons"

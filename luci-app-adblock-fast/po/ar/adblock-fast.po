@@ -594,12 +594,3 @@ msgstr "لا شيء"
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/view/adblock-fast/overview.js:126
 msgid "unbound adblock list"
 msgstr ""
-
-#~ msgid "Configuration"
-#~ msgstr "إعدادات"
-
-#~ msgid "Info"
-#~ msgstr "معلومات"
-
-#~ msgid "Loading"
-#~ msgstr "جار التحميل"

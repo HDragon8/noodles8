@@ -2,7 +2,6 @@
 'require view';
 'require fs';
 'require form';
-'require uci';
 'require tools.widgets as widgets';
 
 return view.extend({
@@ -33,20 +32,8 @@ return view.extend({
 		s.tab('general',  _('General Settings'));
 		s.tab('template', _('Edit Template'), _('Edit the template that is used for generating the ksmbd configuration.'));
 
-		o = s.taboption('general', widgets.NetworkSelect, 'interface', _('Interface'),
+		s.taboption('general', widgets.NetworkSelect, 'interface', _('Interface'),
 			_('Listen only on the given interface or, if unspecified, on lan'));
-		o.multiple = true;
-		o.cfgvalue = (section_id => L.toArray(uci.get('ksmbd', section_id, 'interface')));
-		o.write = function(section_id, formvalue) {
-			var cfgvalue = this.cfgvalue(section_id),
-			    oldNetworks = L.toArray(cfgvalue),
-			    newNetworks = L.toArray(formvalue);
-			oldNetworks.sort();
-			newNetworks.sort();
-			if (oldNetworks.join(' ') == newNetworks.join(' '))
-				return;
-			return uci.set('ksmbd', section_id, 'interface', newNetworks.join(' '));
-		};
 
 		o = s.taboption('general', form.Value, 'workgroup', _('Workgroup'));
 		o.placeholder = 'WORKGROUP';

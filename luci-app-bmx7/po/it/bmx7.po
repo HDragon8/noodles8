@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-10-16 16:56+0000\n"
-"Last-Translator: Frankie McEyes <mceyes@protonmail.com>\n"
+"PO-Revision-Date: 2023-04-03 07:17+0000\n"
+"Last-Translator: Francesco <formido82@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsbmx7/it/>\n"
 "Language: it\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/tunnels_j.htm:33
 msgid "Announcements"
@@ -41,36 +41,36 @@ msgstr "Interfaccia"
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/nodes_j.htm:81
 msgid "Last Desc"
-msgstr "Ultima Descrizione"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/admin_status/index/bmx7_nodes.htm:14
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/nodes_j.htm:82
 msgid "Last Ref"
-msgstr "Ultimo riferimento"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:77
 msgid "Link key"
-msgstr "Collega chiave"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:61
 msgid "Link-local IPv6"
-msgstr "Collega IPv6 locale"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:71
 msgid "Links"
-msgstr "Collegamenti"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/tunnels_j.htm:42
 msgid "Local net"
-msgstr "Rete locale"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:60
 msgid "Max rate"
-msgstr "Velocità massima"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:45
 msgid "Memory usage"
-msgstr "Uso della memoria"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/admin_status/index/bmx7_nodes.htm:13
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/nodes_j.htm:80
@@ -86,7 +86,7 @@ msgstr "Nome"
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:40
 msgid "Neighbours"
-msgstr "Vicini"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/tunnels_j.htm:40
 msgid "Network"
@@ -94,84 +94,84 @@ msgstr "Rete"
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:53
 msgid "Network interfaces"
-msgstr "Interfacce di rete"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/tunnels_j.htm:39
 msgid "Node"
-msgstr "Nodo"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:18
 msgid "Node configuration"
-msgstr "Configurazione nodo"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:25
 msgid "Node key"
-msgstr "Chiave nodo"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:23
 msgid "Node name"
-msgstr "Nome nodo"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:35
 msgid "Node status"
-msgstr "Stato nodo"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:39
 msgid "Nodes seen"
-msgstr "Nodi visti"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/nodes_j.htm:70
 msgid "Originators"
-msgstr "Originatori"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/tunnels_j.htm:43
 msgid "Path Metric"
-msgstr "Metrica percorso"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/admin_status/index/bmx7_nodes.htm:10
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/nodes_j.htm:78
 msgid "Primary IPv6"
-msgstr "IPv6 primario"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:24
 msgid "Primary IPv6 address"
-msgstr "Indirizzo primario IPv6"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:62
 msgid "RX BpP"
-msgstr "RX BpP"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:80
 msgid "RX rate"
-msgstr "Velocità RX"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/tunnels_j.htm:45
 msgid "Rating"
-msgstr "Punteggio"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:78
 msgid "Remote link-local IPv6"
-msgstr "link-local remoto IPv6"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:82
 msgid "Routes"
-msgstr "Rotte"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/admin_status/index/bmx7_nodes.htm:9
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/nodes_j.htm:77
 msgid "S/s/T/t"
-msgstr "S/s/T/t"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:26
 msgid "Short DHash"
-msgstr "DHash corto"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/admin_status/index/bmx7_nodes.htm:8
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/nodes_j.htm:76
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:22
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:75
 msgid "Short ID"
-msgstr "ID breve"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:58
 msgid "State"
@@ -183,27 +183,27 @@ msgstr "Stato"
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:63
 msgid "TX BpP"
-msgstr "TX BpP"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:81
 msgid "TX rate"
-msgstr "Velocità TX"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/tunnels_j.htm:44
 msgid "Tun Metric"
-msgstr "Metrica Tun"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:42
 msgid "Tunnelled IPv4 address"
-msgstr "Indirizzo IPv4 tunnelizzato"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:41
 msgid "Tunnelled IPv6 address"
-msgstr "Indirizzo IPv6 tunnelizzato"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:46
 msgid "Tx queue"
-msgstr "Coda Tx"
+msgstr ""
 
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/status_j.htm:59
 msgid "Type"
@@ -216,4 +216,4 @@ msgstr "Tempo di attività"
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/admin_status/index/bmx7_nodes.htm:11
 #: applications/luci-app-bmx7/root/usr/lib/lua/luci/view/bmx7/nodes_j.htm:79
 msgid "Via Neighbour"
-msgstr "Via vicino"
+msgstr ""

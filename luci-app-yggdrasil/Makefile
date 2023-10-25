@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=LuCI support for Yggdrasil
-LUCI_DEPENDS:=+luci-base +yggdrasil
+LUCI_DEPENDS:=+yggdrasil
 
 include $(TOPDIR)/feeds/luci/luci.mk
 

@@ -32,11 +32,11 @@ msgstr "Zveřejnit informace o klientech LAN v analýzách NextDNS."
 
 #: applications/luci-app-nextdns/htdocs/luci-static/resources/view/nextdns/overview.js:12
 msgid ""
-"For further information, go to <a href=\"https://nextdns.io\" target=\"_blank"
-"\">nextdns.io</a>."
+"For further information, go to <a href=\"https://nextdns.io\" "
+"target=\"_blank\">nextdns.io</a>."
 msgstr ""
-"Pro další informace, přejděte na <a href=\"https://nextdns.io\" target="
-"\"_blank\">nextdns.io</a>."
+"Pro další informace, přejděte na <a href=\"https://nextdns.io\" "
+"target=\"_blank\">nextdns.io</a>."
 
 #: applications/luci-app-nextdns/htdocs/luci-static/resources/view/nextdns/overview.js:15
 msgid "General"

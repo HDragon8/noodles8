@@ -99,9 +99,9 @@ msgid ""
 "\"Peers\" section instead."
 msgstr ""
 "Liste des chaînes de connexion pour les connexions d'homologues sortantes au "
-"format URI, classées par interface source, par exemple { \"eth0\" : [ tcp://a"
-".b.c.d:e ] }. Notez que les connexions SOCKS ne sont PAS affectées par cette "
-"option et doivent être placées dans la section \"Peers\"."
+"format URI, classées par interface source, par exemple { \"eth0\" : [ tcp://"
+"a.b.c.d:e ] }. Notez que les connexions SOCKS ne sont PAS affectées par "
+"cette option et doivent être placées dans la section \"Peers\"."
 
 #: applications/luci-app-yggdrasil/htdocs/luci-static/resources/view/yggdrasil/peers.js:12
 msgid ""
@@ -132,8 +132,8 @@ msgstr ""
 "auditeurs afin d'accepter les connexions entrantes provenant de nœuds non "
 "locaux. La découverte d'homologues par multidiffusion fonctionnera sans "
 "tenir compte des adresses d'écoute définies ici. Chaque auditeur doit être "
-"spécifié au format URI comme ci-dessus, par exemple tcp ://0.0.0.0 :0 ou tcp "
-"://[ : :] :0 pour écouter sur toutes les interfaces."
+"spécifié au format URI comme ci-dessus, par exemple tcp ://0.0.0.0 :0 ou "
+"tcp ://[ : :] :0 pour écouter sur toutes les interfaces."
 
 #: applications/luci-app-yggdrasil/htdocs/luci-static/resources/view/yggdrasil/settings.js:51
 msgid "Listen for beacons"
@@ -157,9 +157,9 @@ msgid ""
 "null. This is entirely optional but, if set, is visible to the whole network "
 "on request."
 msgstr ""
-"Informations facultatives sur le nœud. Il doit s'agir d'une carte { \"key\" :"
-" \"value\", ... } ou être définie comme nulle. Cette information est "
-"entièrement facultative mais, si elle est définie, elle est visible par "
+"Informations facultatives sur le nœud. Il doit s'agir d'une carte "
+"{ \"key\" : \"value\", ... } ou être définie comme nulle. Cette information "
+"est entièrement facultative mais, si elle est définie, elle est visible par "
 "l'ensemble du réseau sur demande."
 
 #: applications/luci-app-yggdrasil/htdocs/luci-static/resources/view/yggdrasil/peers.js:11
@@ -198,68 +198,3 @@ msgstr "Nom de l’interface réseau de Yggdrasil"
 #: applications/luci-app-yggdrasil/htdocs/luci-static/resources/view/yggdrasil/settings.js:40
 msgid "e.g. tcp://0.0.0.0:0 or tcp://[::]:0"
 msgstr "p. ex. tcp://0.0.0.0:0 or tcp://[::]:0"
-
-#~ msgid "Address to listen for incoming connections"
-#~ msgstr "Adresse pour écouter les connexions entrantes"
-
-#~ msgid "Allow from direct"
-#~ msgstr "Autoriser directement"
-
-#~ msgid "Allow from remote"
-#~ msgstr "Autoriser à distance"
-
-#~ msgid "Blacklisted public keys"
-#~ msgstr "Clés publiques sur liste noire"
-
-#~ msgid "IPv4 local subnet"
-#~ msgstr "Sous-réseau local IPv4"
-
-#~ msgid "IPv4 remote subnet"
-#~ msgstr "Sous-réseau distant IPv4"
-
-#~ msgid "IPv4 subnet"
-#~ msgstr "Sous-réseau IPv4"
-
-#~ msgid "IPv6 local subnet"
-#~ msgstr "Sous-réseau local IPv6"
-
-#~ msgid "IPv6 remote subnet"
-#~ msgstr "Sous-réseau distant IPv6"
-
-#~ msgid "IPv6 subnet"
-#~ msgstr "Sous-réseau IPv6"
-
-#~ msgid "Interface name"
-#~ msgstr "Nom de l’interface"
-
-#~ msgid "Key"
-#~ msgstr "Clé"
-
-#~ msgid "Multicast interfaces"
-#~ msgstr "Interfaces multidiffusion"
-
-#~ msgid "Public encryption key"
-#~ msgstr "Clé publique de chiffrement"
-
-#~ msgid "Public key"
-#~ msgstr "Clé publique"
-
-#~ msgid "Signing private key"
-#~ msgstr "Signature de la clé privée"
-
-#~ msgid "Signing public key"
-#~ msgstr "Signature de la clé publique"
-
-#~ msgid "Subnet"
-#~ msgstr "Sous-réseau"
-
-#~ msgid "Tunnel Routing"
-#~ msgstr "Routage du tunnel"
-
-#~ msgid "Tunnel routing"
-#~ msgstr "Routage du tunnel"
-
-#~ msgid "By default, nodeinfo contains some defaults including the platform,"
-#~ msgstr ""
-#~ "Par défaut, nodeinfo contient certains paramètres par défaut, notamment "
-#~ "la plate-forme,"

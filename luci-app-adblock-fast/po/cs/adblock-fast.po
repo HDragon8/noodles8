@@ -593,36 +593,3 @@ msgstr "žádný"
 #: applications/luci-app-adblock-fast/htdocs/luci-static/resources/view/adblock-fast/overview.js:126
 msgid "unbound adblock list"
 msgstr ""
-
-#~ msgid "disabled"
-#~ msgstr "zakázáno"
-
-#~ msgid "%s Error: %s"
-#~ msgstr "%s Chyba: %s"
-
-#~ msgid "%s Error: %s %s"
-#~ msgstr "%s Chyba: %s %s"
-
-#~ msgid "Collected Errors"
-#~ msgstr "Shromážděné chyby"
-
-#~ msgid "Configuration"
-#~ msgstr "Nastavení"
-
-#~ msgid "Info"
-#~ msgstr "Informace"
-
-#~ msgid "Blacklisted Domain URLs"
-#~ msgstr "Zakázané URL adresy domén"
-
-#~ msgid "Blacklisted Domains"
-#~ msgstr "Zakázané domény"
-
-#~ msgid "Blacklisted Hosts URLs"
-#~ msgstr "Zakázané URL adresy hostitelů"
-
-#~ msgid "README"
-#~ msgstr "README"
-
-#~ msgid "Reload"
-#~ msgstr "Znovu načíst"

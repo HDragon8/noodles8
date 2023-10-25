@@ -562,21 +562,3 @@ msgstr ""
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:225
 msgid "all"
 msgstr ""
-
-#~ msgid "Comment"
-#~ msgstr "Kommentti"
-
-#~ msgid "Configuration"
-#~ msgstr "Kokoonpano"
-
-#~ msgid "Loading"
-#~ msgstr "Ladataan"
-
-#~ msgid "Running"
-#~ msgstr "Käynnissä"
-
-#~ msgid "Stopped"
-#~ msgstr "Pysäytetty"
-
-#~ msgid "VPN"
-#~ msgstr "VPN"

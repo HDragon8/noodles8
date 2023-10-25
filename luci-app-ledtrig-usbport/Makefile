@@ -8,7 +8,8 @@
 include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:= LuCI Support for ledtrigger usbport
-LUCI_DEPENDS:=+luci-base +kmod-usb-ledtrig-usbport
+LUCI_DEPENDS:=+kmod-usb-ledtrig-usbport
+LUCI_PKGARCH:=all
 
 include $(TOPDIR)/feeds/luci/luci.mk
 

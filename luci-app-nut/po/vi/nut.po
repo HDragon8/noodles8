@@ -558,8 +558,8 @@ msgid ""
 "Use upscmd -l to see full list which the commands your UPS supports "
 "(requires upscmd package)"
 msgstr ""
-"Sử dụng upscmd -l để xem danh sách đầy đủ các lệnh mà UPS của bạn hỗ trợ ("
-"yêu cầu gói upscmd)"
+"Sử dụng upscmd -l để xem danh sách đầy đủ các lệnh mà UPS của bạn hỗ trợ "
+"(yêu cầu gói upscmd)"
 
 #: applications/luci-app-nut/luasrc/model/cbi/nut_server.lua:110
 msgid ""
