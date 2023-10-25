@@ -168,14 +168,14 @@ net/qBittorrent-static net/qBittorrent net/transmission net/phtunnel libs/qtbase
 net/uugamebooster net/verysync net/vlmcsd net/dnsforwarder net/nps net/tcpping net/netatalk net/pgyvpn net/n2n
 mv -f miniupnpd miniupnpd-iptables
 
-git_sparse_clone master "https://github.com/immortalwrt/packages" "immpkgs" net/mwol \
+git_sparse_clone openwrt-23.05 "https://github.com/immortalwrt/packages" "immpkgs" net/mwol \
 net/sub-web net/dnsproxy net/haproxy net/v2raya net/cdnspeedtest net/keepalived \
 net/subconverter net/ngrokc net/oscam net/njitclient net/scutclient net/gost net/gowebdav \
 libs/jpcre2 libs/wxbase libs/rapidjson libs/libcron libs/quickjspp libs/toml11 \
 utils/cpulimit utils/filebrowser utils/cups net/udp2raw net/msd_lite net/xfrpc net/bitsrunlogin-go \
 utils/phicomm-k3screenctrl net/apinger net/basicstation libs/sx1302_hal
 
-git_sparse_clone master "https://github.com/immortalwrt/immortalwrt" "immortal" package/kernel/rtl88x2bu \
+git_sparse_clone openwrt-23.05 "https://github.com/immortalwrt/immortalwrt" "immortal" package/kernel/rtl88x2bu \
 package/kernel/r8168 package/kernel/rtl8821cu package/kernel/rtl8189es package/emortal/autocore package/emortal/automount \
 package/utils/mhz
 #package/network/utils/fullconenat package/network/utils/fullconenat-nft \
@@ -185,7 +185,7 @@ package/utils/mhz
 git_sparse_clone master "https://github.com/coolsnowwolf/luci" "leluci" applications libs/luci-lib-fs
 mv -f applications luciapp
 
-git_sparse_clone master "https://github.com/immortalwrt/luci" "immluci" applications protocols/luci-proto-minieap
+git_sparse_clone openwrt-23.05 "https://github.com/immortalwrt/luci" "immluci" applications protocols/luci-proto-minieap
 mv -n applications/* luciapp/; rm -rf applications
 
 git_sparse_clone master "https://github.com/coolsnowwolf/lede" "leanlede" package/lean package/network/services/shellsync package/network/services/e2guardian
