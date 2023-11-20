@@ -248,6 +248,8 @@ cp -Rf luci-app-minidlna/po/zh-cn luci-app-minidlna/po/zh_Hans
 cp -Rf luci-app-wrtbwmon/po/zh_Hans luci-app-wrtbwmon/po/zh-cn
 rm -rf luci-app-xunlei/po/zh_Hans
 cp -Rf luci-app-xunlei/po/zh-cn luci-app-xunlei/po/zh_Hans
+rm -rf luci-app-netspeedtest/po/zh_Hans
+cp -Rf luci-app-netspeedtest/po/zh-cn luci-app-netspeedtest/po/zh_Hans
 
 #bash diy/create_acl_for_luci.sh -a >/dev/null 2>&1
 #bash diy/convert_translation.sh -a >/dev/null 2>&1
