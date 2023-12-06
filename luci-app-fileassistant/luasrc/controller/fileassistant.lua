@@ -1,6 +1,7 @@
 module("luci.controller.fileassistant", package.seeall)
 
 function index()
+	entry({"admin", "services"}, firstchild(), _("Services") , 45).dependent = false
 
     entry({"admin", "services"}, firstchild(), "Services", 44).dependent = false
 
