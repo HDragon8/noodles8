@@ -9,33 +9,13 @@ PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/$(PKG_NAME)/config
-	config PACKAGE_kmod-inet-diag
-	default y if PACKAGE_$(PKG_NAME)
-
-	config PACKAGE_luci-compat
-	default y if PACKAGE_$(PKG_NAME)
-
-	config PACKAGE_kmod-nft-tproxy
-	default y if PACKAGE_firewall4
-
-	config PACKAGE_kmod-ipt-nat
-	default y if ! PACKAGE_firewall4
-
-	config PACKAGE_iptables-mod-tproxy
-	default y if ! PACKAGE_firewall4
-
-	config PACKAGE_iptables-mod-extra
-	default y if ! PACKAGE_firewall4
-endef
-
 define Package/$(PKG_NAME)
 	CATEGORY:=LuCI
 	SUBMENU:=3. Applications
 	TITLE:=LuCI support for clash
 	PKGARCH:=all
-	DEPENDS:=+dnsmasq-full +coreutils +coreutils-nohup +bash +curl +ca-bundle +ipset +ip-full \
-	+libcap +libcap-bin +libcap-bin +ruby +ruby-yaml +kmod-tun +unzip
+	DEPENDS:=+dnsmasq-full +coreutils +coreutils-nohup +bash +curl +ca-bundle +ip-full \
+		+libcap +libcap-bin +libcap-bin +ruby +ruby-yaml +kmod-inet-diag +kmod-nft-tproxy +kmod-tun +unzip
 	MAINTAINER:=vernesong
 endef
 
