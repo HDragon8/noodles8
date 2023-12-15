@@ -1,63 +1,50 @@
 msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+msgid "Official website:"
+msgstr "官方网站："
 
 msgid "Xunlei"
-msgstr "迅雷"
+msgstr "迅雷下载"
 
-msgid "<a>NAS Xunlei DSM 7.x Beta Version</a> | <a href=\"https://github.com/gngpp/xunlei\" target=\"_blank\">Project GitHub URL</a>"
-msgstr "<a>NAS 迅雷 DSM 7.x 内测版</a> | <a href=\"https://github.com/gngpp/xunlei\" target=\"_blank\">GitHub 项目地址</a>"
+msgid "Xunlei is an download tool, made by Xunlei, Inc."
+msgstr "迅雷是一个迅雷公司出品下载工具。"
 
-msgid "Enabled"
-msgstr "启用"
+msgid "Config path"
+msgstr "配置文件路径"
 
-msgid "Debug"
-msgstr "调试模式"
-
-msgid "RUNNING"
-msgstr "运行中"
-
-msgid "NOT RUNNING"
-msgstr "未运行"
-
-msgid "Collecting data..."
-msgstr "收集数据..."
-
-msgid "Open Web Interface"
-msgstr "打开 Web 界面"
-
-msgid "Host"
-msgstr "监听主机"
+msgid "Download path"
+msgstr "下载路径"
 
 msgid "Port"
-msgstr "监听端口"
+msgstr "端口"
 
-msgid "Username"
-msgstr "用户名"
+msgid "HTTP Port"
+msgstr "HTTP 端口"
 
-msgid "Password"
-msgstr "密码"
+msgid "Service Status"
+msgstr "服务状态"
 
-msgid "Settings"
-msgstr "设置"
+msgid "Xunlei status:"
+msgstr "迅雷的状态信息如下："
 
-msgid "Log"
-msgstr "日志"
+msgid "Setup"
+msgstr "安装配置"
 
-msgid "Data Storage Path"
-msgstr "数据储存路径"
+msgid "The following parameters will only take effect during installation or upgrade:"
+msgstr "以下参数只在安装或者升级时才会生效："
 
-msgid "Note: Please keep your user data safe"
-msgstr "注意: 请保管好你的用户数据"
+msgid "Status"
+msgstr "状态"
 
-msgid "Download Storage Path"
-msgstr "下载存储路径"
+msgid "Xunlei is running"
+msgstr "迅雷运行中"
 
-msgid "Download the storage path, which will be mounted on the binding path after startup"
-msgstr "下载存储路径，启动后将挂载到绑定路径"
+msgid "Xunlei is not running"
+msgstr "迅雷未运行"
 
-msgid "Mount Bind Download Path"
-msgstr "挂载绑定路径"
+msgid "Open Xunlei"
+msgstr "打开迅雷"
 
-msgid "Mount the binding path, which will be mapped to the download storage path after startup, no special default can be"
-msgstr "挂载绑定路径，启动后将映射到下载存储路径，无特殊默认即可"
-
+msgid "Xunlei running in host network, port is always 2345 if enabled"
+msgstr "在宿主网络运行迅雷，如果启用则端口固定为 2345"
