@@ -126,8 +126,8 @@ git_sparse_clone master "https://github.com/kiddin9/openwrt-packages" "kinddin9"
 #svn export https://github.com/Ysurac/openmptcprouter-feeds/trunk/luci-app-iperf
 
 #NAS xunlei
-rm -rf luci-app-xunlei
-git_sparse_clone main "https://github.com/gngpp/nas-xunlei" "nasxunlei" openwrt/xunlei openwrt/luci-app-xunlei
+#rm -rf luci-app-xunlei
+#git_sparse_clone main "https://github.com/gngpp/nas-xunlei" "nasxunlei" openwrt/xunlei openwrt/luci-app-xunlei
 
 rm -rf luci-app-netdata
 
