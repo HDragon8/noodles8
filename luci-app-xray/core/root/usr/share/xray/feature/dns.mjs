@@ -10,7 +10,7 @@ const fallback_default_dns = "1.1.1.1:53";
 const geosite_existence = access("/usr/share/xray/geosite.dat") || false;
 
 function split_ipv4_host_port(val, port_default) {
-    const result = match(val, /([0-9\.]+):([0-9]+)/);
+    const result = match(val, /^([0-9\.]+):([0-9]+)$/);
     if (result == null) {
         return {
             address: val,
@@ -75,31 +75,34 @@ export function dns_rules(proxy, tcp_hijack_inbound_tags, udp_hijack_inbound_tag
     for (let i = dns_port; i <= dns_port + dns_count; i++) {
         push(dns_server_tags, sprintf("dns_server_inbound:%d", i));
     }
-    return [
-        {
-            type: "field",
-            port: "53",
-            inboundTag: tcp_hijack_inbound_tags,
-            outboundTag: "dns_tcp_hijack_outbound"
-        },
-        {
-            type: "field",
-            port: "53",
-            inboundTag: udp_hijack_inbound_tags,
-            outboundTag: "dns_udp_hijack_outbound"
-        },
+    let result = [
         {
             type: "field",
             inboundTag: dns_server_tags,
             outboundTag: "dns_server_outbound"
         },
     ];
+    if (proxy.dns_tcp_hijack) {
+        push(result, {
+            type: "field",
+            port: "53",
+            inboundTag: tcp_hijack_inbound_tags,
+            outboundTag: "dns_tcp_hijack_outbound"
+        });
+    }
+    if (proxy.dns_udp_hijack) {
+        push(result, {
+            type: "field",
+            port: "53",
+            inboundTag: udp_hijack_inbound_tags,
+            outboundTag: "dns_udp_hijack_outbound"
+        });
+    }
+    return result;
 };
 
 export function dns_server_outbounds(proxy) {
-    return [
-        direct_outbound("dns_tcp_hijack_outbound", proxy.dns_tcp_hijack || ""),
-        direct_outbound("dns_udp_hijack_outbound", proxy.dns_udp_hijack || ""),
+    let result = [
         {
             protocol: "dns",
             settings: {
@@ -113,6 +116,13 @@ export function dns_server_outbounds(proxy) {
             tag: "dns_server_outbound"
         }
     ];
+    if (proxy.dns_tcp_hijack) {
+        push(result, direct_outbound("dns_tcp_hijack_outbound", proxy.dns_tcp_hijack));
+    }
+    if (proxy.dns_udp_hijack) {
+        push(result, direct_outbound("dns_udp_hijack_outbound", proxy.dns_udp_hijack));
+    }
+    return result;
 };
 
 export function dns_conf(proxy, config, manual_tproxy, fakedns) {
@@ -133,11 +143,19 @@ export function dns_conf(proxy, config, manual_tproxy, fakedns) {
         }
     }
 
+    let resolve_merged = {};
+    for (let k in keys(domain_extra_options)) {
+        const v = domain_extra_options[k];
+        let original = resolve_merged[v] || [];
+        push(original, k);
+        resolve_merged[v] = original;
+    }
+
     let servers = [
         ...fake_dns_domains(fakedns),
-        ...map(keys(domain_extra_options), function (k) {
-            const i = split_ipv4_host_port(domain_extra_options[k]);
-            i["domains"] = [`domain:${k}`];
+        ...map(keys(resolve_merged), function (k) {
+            let i = split_ipv4_host_port(k);
+            i["domains"] = uniq(resolve_merged[k]);
             i["skipFallback"] = true;
             return i;
         }),

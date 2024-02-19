@@ -199,7 +199,6 @@ return view.extend({
         o.modalonly = true;
 
         o = ss.taboption('general', form.Value, 'domain_resolve_dns', _('Resolve Domain via DNS'), _("Specify a DNS to resolve server hostname. Be careful of possible recursion."));
-        o.datatype = 'hostport';
         o.modalonly = true;
 
         o = ss.taboption('general', form.Value, 'server_port', _('Server Port'));
@@ -284,7 +283,17 @@ return view.extend({
         inbound_type.value("tproxy_udp", _("Transparent Proxy (UDP)"));
         inbound_type.rmempty = false;
 
-        let specify_outbound = extra_inbounds.option(form.Flag, 'specify_outbound', _('Specify Outbound'), _('If not selected, this inbound will use global settings (including sniffing settings). '));
+        let inbound_username = extra_inbounds.option(form.Value, "inbound_username", _("Username (Optional)"));
+        inbound_username.depends("inbound_type", "socks5");
+        inbound_username.depends("inbound_type", "http");
+        inbound_username.modalonly = true;
+
+        let inbound_password = extra_inbounds.option(form.Value, "inbound_password", _("Password (Optional)"));
+        inbound_password.depends("inbound_type", "socks5");
+        inbound_password.depends("inbound_type", "http");
+        inbound_password.modalonly = true;
+
+        let specify_outbound = extra_inbounds.option(form.Flag, 'specify_outbound', _('Specify Outbound'), _('If not selected, this inbound will use global settings (including sniffing settings).'));
         specify_outbound.modalonly = true;
 
         let destination = extra_inbounds.option(form.MultiValue, 'destination', _('Destination'), _("Select multiple outbounds for load balancing. If none selected, requests will be sent via direct outbound."));
