@@ -154,7 +154,7 @@ net/sub-web net/dnsproxy net/haproxy net/v2raya net/cdnspeedtest net/keepalived 
 net/subconverter net/ngrokc net/oscam net/njitclient net/scutclient net/gost net/gowebdav \
 libs/jpcre2 libs/wxbase libs/rapidjson libs/libcron libs/quickjspp libs/toml11 \
 utils/cpulimit utils/filebrowser utils/cups net/udp2raw net/msd_lite net/xfrpc net/bitsrunlogin-go \
-utils/phicomm-k3screenctrl net/apinger net/basicstation libs/sx1302_hal
+utils/phicomm-k3screenctrl net/apinger net/basicstation libs/sx1302_hal sound/spotifyd
 
 git_sparse_clone openwrt-23.05 "https://github.com/immortalwrt/immortalwrt" "immortal" package/kernel/rtl88x2bu \
 package/kernel/r8168 package/kernel/rtl8821cu package/kernel/rtl8189es package/emortal/autocore package/emortal/automount package/emortal/ipv6-helper \
@@ -183,6 +183,7 @@ rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 #删除没有依赖的包
 rm -rf luci-app-noddos
 rm -rf luci-app-daed
+rm -rf luci-app-turboacc
 #移动luci-base、luci-mod-status、luci-mod-system到A-model文件夹
 #mkdir A-model
 #mv -f luci-base A-model/luci-base
