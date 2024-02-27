@@ -43,6 +43,9 @@ msgstr "homebox网页测速服务已启动"
 msgid "The homebox service is not running."
 msgstr "homebox网页测速服务未启动"
 
+msgid "Please enable the Homebox service"
+msgstr "请将homebox服务启用"
+
 msgid "homebox Status"
 msgstr "homebox网页测速服务状态"
 
