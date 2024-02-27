@@ -16,7 +16,7 @@ function mvdir() {
 mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
-git clone --depth 1 https://github.com/HDragon8/noodles-default-settings noodles-default-settings
+git clone --depth 1 https://github.com/HDragon8/Adefault-settings Adefault-settings
 git clone --depth 1 https://github.com/sirpdboy/netspeedtest && mvdir netspeedtest
 git clone --depth 1 https://github.com/kiddin9/luci-theme-edge
 git clone --depth 1 https://github.com/kiddin9/openwrt-amule-dlp && mvdir openwrt-amule-dlp
@@ -184,18 +184,6 @@ rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 rm -rf luci-app-noddos
 rm -rf luci-app-daed
 rm -rf luci-app-turboacc
-#移动luci-base、luci-mod-status、luci-mod-system到A-model文件夹
-#mkdir A-model
-#mv -f luci-base A-model/luci-base
-#mv -f luci-mod-status A-model/luci-mod-status
-#mv -f luci-mod-system A-model/luci-mod-system
-#mv -f luci-app-samba4 A-model/luci-app-samba4
-#mv -f nftables A-model/nftables
-#mv -f libnftnl A-model/libnftnl
-#mv -f firewall A-model/firewall
-#mv -f firewall4 A-model/firewall4
-#mv -f luci-app-firewall A-model/luci-app-firewall
-#mv -f 952-net-conntrack-events-support-multiple-registrant.patch .github/diy/target/linux/generic/hack-5.10
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
