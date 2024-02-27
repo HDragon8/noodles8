@@ -15,19 +15,11 @@ fi
 ln -sf "/sbin/ip" "/usr/bin/ip"
 
 sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release
-echo "DISTRIB_REVISION='R23.12.15'" >> /etc/openwrt_release
-#sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release
-#echo "DISTRIB_DESCRIPTION='OpenWrt v$(date +'%Y.%m.%d') by noodles '" >> /etc/openwrt_release
-
-#sed -i '/luciversion/d' /usr/lib/lua/luci/version.lua
-#echo "luciversion = '*noodles*'" >> /usr/lib/lua/luci/version.lua
-#sed -i '/luciname/d' /usr/lib/lua/luci/version.lua
-#echo "luciname = 'LuCI openwrt-22.03'" >> /usr/lib/lua/luci/version.lua
+echo "DISTRIB_REVISION='R24.2.25'" >> /etc/openwrt_release
 
 sed -i "/log-facility/d" "/etc/dnsmasq.conf"
 echo "log-facility=/dev/null" >> "/etc/dnsmasq.conf"
 
-#rm -f "/www/luci-static/resources/view/status/include/29_ethinfo.js"
 rm -f "/tmp/luci-indexcache"
 rm -rf "/tmp/luci-modulecache"
 

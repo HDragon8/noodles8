@@ -10,7 +10,7 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=noodles-default-settings
+PKG_NAME:=Adefault-settings
 PKG_VERSION:=1.1
 PKG_RELEASE:=3
 
@@ -18,7 +18,7 @@ PKG_LICENSE:=GPL-3.0
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/noodles-default-settings
+define Package/Adefault-settings
   SECTION:=luci
   CATEGORY:=LuCI
   TITLE:=LuCI support for Default Settings
@@ -26,10 +26,10 @@ define Package/noodles-default-settings
   PKGARCH:=all
 endef
 
-define Package/noodles-default-settings-chn
-  $(Package/noodles-default-settings)
+define Package/Adefault-settings-chn
+  $(Package/Adefault-settings)
   TITLE+= (Optimize for CHN users)
-  DEPENDS:=+noodles-default-settings +@LUCI_LANG_zh_Hans +luci-i18n-base-zh-cn
+  DEPENDS:=+Adefault-settings +@LUCI_LANG_zh_Hans +luci-i18n-base-zh-cn
 endef
 
 define Build/Prepare
@@ -39,7 +39,7 @@ endef
 define Build/Compile
 endef
 
-define Package/noodles-default-settings/install
+define Package/Adefault-settings/install
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
 	$(INSTALL_BIN) ./files/99-default-settings $(1)/etc/uci-defaults/
 	$(CP) ./files/* $(1)/
@@ -52,7 +52,7 @@ define Package/noodles-default-settings/install
 	fi;
 endef
 
-define Package/noodles-default-settings-chn/install
+define Package/Adefault-settings-chn/install
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
 	$(INSTALL_BIN) ./files/99-default-settings-chinese $(1)/etc/uci-defaults/
 
@@ -61,5 +61,5 @@ define Package/noodles-default-settings-chn/install
 	po2lmo ./i18n/more.zh_Hans.po $(1)/usr/lib/lua/luci/i18n/more.zh-cn.lmo
 endef
 
-$(eval $(call BuildPackage,noodles-default-settings))
-$(eval $(call BuildPackage,noodles-default-settings-chn))
+$(eval $(call BuildPackage,Adefault-settings))
+$(eval $(call BuildPackage,Adefault-settings-chn))
