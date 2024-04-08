@@ -151,7 +151,7 @@ mv -f miniupnpd miniupnpd-iptables
 
 git_sparse_clone openwrt-23.05 "https://github.com/immortalwrt/packages" "immpkgs" net/mwol \
 net/sub-web net/dnsproxy net/haproxy net/v2raya net/cdnspeedtest net/keepalived net/dae net/modemband \
-net/subconverter net/ngrokc net/oscam net/njitclient net/scutclient net/gost net/gowebdav /net/dufs \
+net/subconverter net/ngrokc net/oscam net/njitclient net/scutclient net/gost net/gowebdav net/dufs \
 libs/jpcre2 libs/wxbase libs/rapidjson libs/libcron libs/quickjspp libs/toml11 \
 utils/cpulimit utils/filebrowser utils/cups net/udp2raw net/msd_lite net/xfrpc net/bitsrunlogin-go \
 utils/phicomm-k3screenctrl net/apinger net/basicstation libs/sx1302_hal sound/spotifyd
