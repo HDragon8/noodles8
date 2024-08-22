@@ -178,8 +178,8 @@ mv -n luciapp/* ./ ; rm -Rf luciapp
 mv -n openwrt-package/* ./ ; rm -Rf openwrt-package
 
 rm -rf luci-app-samba
-rm -rf ./*/.git & rm -f ./*/.gitattributes
-rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
+#rm -rf ./*/.git & rm -f ./*/.gitattributes
+#rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 #删除没有依赖的包
 rm -rf luci-app-noddos
 rm -rf luci-app-daed
